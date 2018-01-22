@@ -8,59 +8,69 @@ var game = {
 game.do = {
   createCards: function() {
     game.cards.push({
-      type: "Satoshi Nakamoto",
-      skill: ["law", "coding", "marketing"],
+      type: 'Satoshi Nakamoto',
+      skill: ['law', 'coding', 'marketing'],
       law: 1,
       coding: 1,
-      marketing: 1
+      marketing: 1,
+      imageURL: 'satoshi-nakamoto.jpg'
     },
     {
-      type: "Internet Meltdown",
-      skill: ["law", "coding"],
+      type: 'Internet Meltdown',
+      skill: ['law', 'coding'],
       law: 1,
-      coding: 1
-    },
-    {
-      type: "Internet Meltdown",
-      skill: ["law", "marketing"],
-      law: 1,
-      marketing: 1
-    },
-    {
-      type: "Internet Meltdown",
-      skill: ["coding", "marketing"],
       coding: 1,
-      marketing: 1
+      imageURL: 'internet-meltdown-1.jpg'
+    },
+    {
+      type: 'Internet Meltdown',
+      skill: ['law', 'marketing'],
+      law: 1,
+      marketing: 1,
+      imageURL: 'internet-meltdown-2.jpg'
+    },
+    {
+      type: 'Internet Meltdown',
+      skill: ['coding', 'marketing'],
+      coding: 1,
+      marketing: 1,
+      imageURL: 'internet-meltdown-3.jpg'
     });
 
     _.each(_.range(7), function(){
       game.cards.push({
-        type: "Exchange",
-        storageCapacity: 3
+        type: 'Exchange',
+        storageCapacity: 3,
+        imageURL: 'exchange.jpg'
       },
       {
-        type: "Lawsuit",
-        attack: "Lawsuit",
-        skill: "law",
-        law: 1
+        type: 'Lawsuit',
+        attack: 'Lawsuit',
+        skill: 'law',
+        law: 1,
+        imageURL: 'lawsuit.jpg'
       },
       {
-        type: "Hack",
-        attack: "Hack",
-        skill: "coding",
-        coding: 1
+        type: 'Hack',
+        attack: 'Hack',
+        skill: 'coding',
+        coding: 1,
+        imageURL: 'hack.jpg'
       },
       {
-        type: "Smear Campaign",
-        attack: "Smear Campaign",
-        skill: "marketing",
-        marketing: 1
+        type: 'Smear Campaign',
+        attack: 'Smear Campaign',
+        skill: 'marketing',
+        marketing: 1,
+        imageURL: 'smear.jpg'
       },
       {
-        type: "Skullduggery"
+        type: 'Skullduggery',
+        imageURL: 'skullduggery-confusion.jpg'
       },
       {
-        type: "Head Hunter"
+        type: 'Head Hunter',
+        imageURL: 'head-hunter.jpg'
       });
     });
 
@@ -70,208 +80,233 @@ game.do = {
     });
 
     game.cards.push({
-      type: "Dealer"
+      type: 'Dealer',
+      imageURL: 'dealer.jpg'
     },
     {
-      type: "Bonus Rule",
-      name: "Knives Out"
+      type: 'Bonus Rule',
+      name: 'Knives Out',
+      imageURL: 'bonus-rule-knives-out.jpg'
     },
     {
-      type: "Bonus Rule",
-      name: "Nakamoto Obliterate"
+      type: 'Bonus Rule',
+      name: 'Nakamoto Obliterate',
+      imageURL: 'bonus-rule-nakamoto-obliterate.jpg'
     },
     {
-      type: "Bonus Rule",
-      name: "Anarchy"
+      type: 'Bonus Rule',
+      name: 'Anarchy',
+      imageURL: 'bonus-rule-anarchy.jpg'
     },
     {
-      type: "Character",
-      name: "Carl",
+      type: 'Character',
+      name: 'Carl',
       characterNumber: 1,
       law: 1,
       coding: 1,
       marketing: 1,
-      storageCapacity: 3
+      storageCapacity: 3,
+      imageURL: 'carl.jpg'
     },
     {
-      type: "Character",
-      name: "Vernon",
+      type: 'Character',
+      name: 'Vernon',
       characterNumber: 2,
       law: 1,
       coding: 0,
       marketing: 2,
-      storageCapacity: 3
+      storageCapacity: 3,
+      imageURL: 'vernon.jpg'
     },
     {
-      type: "Character",
-      name: "Robert",
+      type: 'Character',
+      name: 'Robert',
       characterNumber: 3,
       law: 0,
       coding: 1,
       marketing: 1,
-      storageCapacity: 4
+      storageCapacity: 4,
+      imageURL: 'robert.jpg'
     },
     {
-      type: "Character",
-      name: "Bruce",
+      type: 'Character',
+      name: 'Bruce',
       characterNumber: 4,
       law: 2,
       coding: 1,
       marketing: 0,
-      storageCapacity: 3
+      storageCapacity: 3,
+      imageURL: 'bruce.jpg'
     },
     {
-      type: "Character",
-      name: "Dave",
+      type: 'Character',
+      name: 'Dave',
       characterNumber: 5,
       law: 1,
       coding: 2,
       marketing: 1,
-      storageCapacity: 2
+      storageCapacity: 2,
+      imageURL: 'dave.jpg'
     },
     {
-      type: "Character",
-      name: "Doge",
+      type: 'Character',
+      name: 'Doge',
       characterNumber: 6,
       law: 1,
       coding: 2,
       marketing: 2,
-      storageCapacity: 1
+      storageCapacity: 1,
+      imageURL: 'doge.jpg'
     },
     {
-      type: "Character",
-      name: "Kenny",
+      type: 'Character',
+      name: 'Kenny',
       characterNumber: 7,
       law: 2,
       coding: 0,
       marketing: 0,
-      storageCapacity: 4
+      storageCapacity: 4,
+      imageURL: 'kenny.jpg'
     },
     {
-      type: "Character",
-      name: "Audrey",
+      type: 'Character',
+      name: 'Audrey',
       characterNumber: 8,
       law: 2,
       coding: 0,
       marketing: 2,
-      storageCapacity: 2
+      storageCapacity: 2,
+      imageURL: 'audrey.jpg'
     },
     {
-      type: "Character",
-      name: "Pepe",
+      type: 'Character',
+      name: 'Pepe',
       characterNumber: 9,
       law: 0,
       coding: 4,
       marketing: 1,
-      storageCapacity: 1
+      storageCapacity: 1,
+      imageURL: 'pepe.jpg'
     },
     {
-      type: "Character",
-      name: "Jennifer",
+      type: 'Character',
+      name: 'Jennifer',
       characterNumber: 10,
       law: 0,
       coding: 0,
       marketing: 1,
-      storageCapacity: 5
+      storageCapacity: 5,
+      imageURL: 'jennifer.jpg'
     },
     {
-      type: "Character",
-      name: "Justin",
+      type: 'Character',
+      name: 'Justin',
       characterNumber: 11,
       law: 0,
       coding: 2,
       marketing: 1,
-      storageCapacity: 3
+      storageCapacity: 3,
+      imageURL: 'justin.jpg'
     },
     {
-      type: "Character",
-      name: "Darren",
+      type: 'Character',
+      name: 'Darren',
       characterNumber: 12,
       law: 1,
       coding: 0,
       marketing: 2,
-      storageCapacity: 3
+      storageCapacity: 3,
+      imageURL: 'darren.jpg'
     },
     {
-      type: "Character",
-      name: "Rick",
+      type: 'Character',
+      name: 'Rick',
       characterNumber: 13,
       law: 1,
       coding: 0,
       marketing: 1,
-      storageCapacity: 4
+      storageCapacity: 4,
+      imageURL: 'rick.jpg'
     },
     {
-      type: "Character",
-      name: "Moon Bear",
+      type: 'Character',
+      name: 'Moon Bear',
       characterNumber: 14,
       law: 1,
       coding: 1,
       marketing: 2,
-      storageCapacity: 2
+      storageCapacity: 2,
+      imageURL: 'moon-bear.jpg'
     },
     {
-      type: "Character",
-      name: "Space Squid",
+      type: 'Character',
+      name: 'Space Squid',
       characterNumber: 15,
       law: 1,
       coding: 1,
       marketing: 0,
-      storageCapacity: 4
+      storageCapacity: 4,
+      imageURL: 'space-squid.jpg'
     },
     {
-      type: "Character",
-      name: "Naked Girl",
+      type: 'Character',
+      name: 'Naked Girl',
       characterNumber: 16,
       law: 2,
       coding: 0,
       marketing: 1,
-      storageCapacity: 3
+      storageCapacity: 3,
+      imageURL: 'naked-girl.jpg'
     },
     {
-      type: "Character",
-      name: "Martian Walrus",
+      type: 'Character',
+      name: 'Martian Walrus',
       characterNumber: 17,
       law: 0,
       coding: 1,
       marketing: 2,
-      storageCapacity: 3
+      storageCapacity: 3,
+      imageURL: 'martian-walrus.jpg'
     },
     {
-      type: "Character",
-      name: "Techno Pirate",
+      type: 'Character',
+      name: 'Techno Pirate',
       characterNumber: 18,
       law: 0,
       coding: 2,
       marketing: 0,
-      storageCapacity: 4
+      storageCapacity: 4,
+      imageURL: 'techno-pirate.jpg'
     },
     {
-      type: "Character",
-      name: "Psychedelic Scientist",
+      type: 'Character',
+      name: 'Psychedelic Scientist',
       characterNumber: 19,
       law: 1,
       coding: 2,
       marketing: 0,
-      storageCapacity: 3
+      storageCapacity: 3,
+      imageURL: 'psychedelic-scientist.jpg'
     },
     {
-      type: "Character",
-      name: "Giant Doge",
+      type: 'Character',
+      name: 'Giant Doge',
       characterNumber: 20,
       law: 2,
       coding: 1,
       marketing: 2,
-      storageCapacity: 1
+      storageCapacity: 1,
+      imageURL: 'giant-doge.jpg'
     },
     {
-      type: "Character",
-      name: "Captain Crypto",
+      type: 'Character',
+      name: 'Captain Crypto',
       characterNumber: 21,
       law: 2,
       coding: 1,
       marketing: 1,
-      storageCapacity: 2
+      storageCapacity: 2,
+      imageURL: 'captain-crypto.jpg'
     });
   },
   newGame: function(characters) {
@@ -290,6 +325,12 @@ game.do = {
     game.do.newDeck();
     game.do.newBonusRules();
     game.do.newCharacters();
+    // console.log("modulo = " + game.activeGame % game.players.length);
+    /*
+    _.each(_.range(game.activeGame % game.players.length), function(){
+      players = game.do.rearrangePlayers(players);
+    });
+    */
     _.each(characters, function(character) {
       game.do.newPlayer(character);
     })
@@ -301,25 +342,46 @@ game.do = {
     game.games[game.activeGame].deck = _.where(game.cards, { deck: true });
   },
   newBonusRules: function() {
-    game.games[game.activeGame].bonusRules = _.where(game.cards, { type: "Bonus Rule" });
+    game.games[game.activeGame].bonusRules = _.where(game.cards, { type: 'Bonus Rule' });
   },
   newCharacters: function() {
-    game.games[game.activeGame].characters = _.where(game.cards, { type: "Character" });
+    game.games[game.activeGame].characters = _.where(game.cards, { type: 'Character' });
   },
   newPlayer: function(name) {
     var character = _.extend( _.first(_.where(game.games[game.activeGame].characters, { name: name })), { skills: [], storage: [] } );
     game.games[game.activeGame].players.push( { character: [character], hand: [], exchanges: [], choices: [], attack: [{ cards: [] }], moonTokens: 0 } );
   },
   createRandomCharacters: function(number) {
-    var characters = _.shuffle(_.where(game.cards, { type: "Character" }));
+    var characters = _.shuffle(_.where(game.cards, { type: 'Character' }));
     _.each(_.range(number), function(index){
-      game.players.push(_.extend(_.pick(characters[index], "name"), {win: 0, loose: 0}));
+      game.players.push(_.extend(_.pick(characters[index], 'name'), {win: 0, loose: 0}));
     });
-    game.do.newGame(_.pluck(game.players, "name"));
+    game.do.newGame(_.pluck(game.players, 'name'));
     game.do.resolvePhase();
   },
+  rearrangePlayers: function(players) {
+    // Move player from first to last
+    players.push(_.first(players));
+    players.splice(0, 1);
+    return players;
+  },
+  setHuman: function(playerID) {
+    game.players[playerID].bot = 'Human';
+  },
+  setRandomBot: function(playerID) {
+    game.players[playerID].bot = 'Random';
+  },
+  runRandomBot: function() {
+    // Random bot
+    setTimeout(function(){
+      if (game.players[game.games[game.activeGame].turn].bot == 'Random') {
+        var random = _.random(0, game.games[game.activeGame].players[game.games[game.activeGame].turn].choices.length - 1);
+        game.do.choose( random );
+      }
+    },100);
+  },
   newDealer: function() {
-    game.games[game.activeGame].players[ game.games[game.activeGame].players.length - 1 ].dealer = _.where(game.cards, { type: "Dealer" });
+    game.games[game.activeGame].players[ game.games[game.activeGame].players.length - 1 ].dealer = _.where(game.cards, { type: 'Dealer' });
   },
   shuffleDeck: function() {
     game.games[game.activeGame].deck = _.shuffle(game.games[game.activeGame].deck);
@@ -359,6 +421,7 @@ game.do = {
     return (game.do.countSkills(playerID, card.skill) > game.do.countSkills(otherPlayerID, card.skill));
   },
   updateUI: function() {
+    $('#templateTarget').html( _.template( $('#gameTemplate').html() ) );
     _.each(game.games[game.activeGame].players, function(player, key){
       $('#player' + key + 'Character').text(JSON.stringify(player.character, null, '\t'));
       $('#player' + key + 'Exchanges').text(JSON.stringify(player.exchanges, null, '\t'));
@@ -376,14 +439,14 @@ game.do = {
       game.games[game.activeGame].players[playerID].character[0].storage.push( _.first(game.games[game.activeGame].deck) );
       game.do.reduceDeckBy(1);
     } else {
-      console.log(game.games[game.activeGame].players[playerID].character[0].name +  " cannot mine for Character");
+      console.log(game.games[game.activeGame].players[playerID].character[0].name +  ' cannot mine for Character');
     }
     _.each(game.games[game.activeGame].players[playerID].exchanges, function(exchange, key){
       if (exchange.storageCapacity > exchange.storage.length) {
         exchange.storage.push( _.first(game.games[game.activeGame].deck) );
         game.do.reduceDeckBy(1);
       } else {
-        console.log(game.games[game.activeGame].players[playerID].character[0].name +  " cannot mine for Exchange " + key);
+        console.log(game.games[game.activeGame].players[playerID].character[0].name +  ' cannot mine for Exchange ' + key);
       }
     });
     if (game.do.isEndGame()) {
@@ -395,7 +458,7 @@ game.do = {
       game.games[game.activeGame].players[playerID].hand.push( _.first(game.games[game.activeGame].deck) );
       game.do.reduceDeckBy(1);
     } else {
-      console.log("No cards in the deck");
+      console.log('No cards in the deck');
     }
   },
   drawFromStorage: function(playerID, fromExchange, exchangeID, cardID) {
@@ -405,7 +468,7 @@ game.do = {
         game.games[game.activeGame].players[playerID].hand.push(card);
         game.games[game.activeGame].players[playerID].exchanges[exchangeID].storage.splice(cardID, 1);
       } else {
-        console.log("No card stored here");
+        console.log('No card stored here');
       }
     } else {
       var card = game.games[game.activeGame].players[playerID].character[0].storage[cardID];
@@ -413,7 +476,7 @@ game.do = {
         game.games[game.activeGame].players[playerID].hand.push( game.games[game.activeGame].players[playerID].character[0].storage[cardID] );
         game.games[game.activeGame].players[playerID].character[0].storage.splice(cardID, 1);
       } else {
-        console.log("No card stored here");
+        console.log('No card stored here');
       }
     }
   },
@@ -424,10 +487,10 @@ game.do = {
         game.games[game.activeGame].players[playerID].character[0].skills.push(card);
         game.games[game.activeGame].players[playerID].hand.splice(cardID, 1);
       } else {
-        console.log("Card doesn't have skills");
+        console.log('Card doesn\'t have skills');
       }
     } else {
-      console.log("Card in hand not found");
+      console.log('Card in hand not found');
     }
   },
   attack: function(playerID, cardID, otherPlayerID, isExchange, exchangeID) {
@@ -437,13 +500,13 @@ game.do = {
         if (game.do.canAttack(playerID, otherPlayerID, card)) {
           game.do.newAttack(playerID, cardID, otherPlayerID, isExchange, exchangeID);
         } else {
-          console.log("Insufficient skills")
+          console.log('Insufficient skills')
         }
       } else {
-        console.log("Not an attack card");
+        console.log('Not an attack card');
       }
     } else {
-      console.log("Card in hand not found");
+      console.log('Card in hand not found');
     }
   },
   newAttack: function(playerID, cardID, otherPlayerID, isExchange, exchangeID) {
@@ -466,13 +529,13 @@ game.do = {
           game.games[game.activeGame].discards.push( game.games[game.activeGame].players[playerID].attack[0].cards[0] );
           game.games[game.activeGame].players[playerID].attack = [{ cards: [] }];
         } else {
-          console.log(game.games[game.activeGame].players[playerID].character[0].name +  " is not being attacked");
+          console.log(game.games[game.activeGame].players[playerID].character[0].name +  ' is not being attacked');
         }
       } else {
-        console.log("This card is not a Skullduggery");
+        console.log('This card is not a Skullduggery');
       }
     } else {
-      console.log("Card in hand not found");
+      console.log('Card in hand not found');
     }
   },
   attackSuccess: function(playerID) {
@@ -501,7 +564,7 @@ game.do = {
       game.games[game.activeGame].discards.push( game.games[game.activeGame].players[playerID].attack[0].cards[0] );
       game.games[game.activeGame].players[playerID].attack = [{ cards: [] }];
     } else {
-      console.log(game.games[game.activeGame].players[playerID].character[0].name +  " is not being attacked");
+      console.log(game.games[game.activeGame].players[playerID].character[0].name +  ' is not being attacked');
     }
   },
   headHunt: function(playerID, cardID, otherPlayerID, skillID) {
@@ -510,10 +573,10 @@ game.do = {
       if (game.do.isCardType(card, 'Head Hunter')) {
         game.do.newHeadHunt(playerID, cardID, otherPlayerID, skillID);
       } else {
-        console.log("Not a Head Hunter card");
+        console.log('Not a Head Hunter card');
       }
     } else {
-      console.log("Card in hand not found");
+      console.log('Card in hand not found');
     }
   },
   newHeadHunt: function(playerID, cardID, otherPlayerID, skillID) {
@@ -530,10 +593,10 @@ game.do = {
         game.games[game.activeGame].players[playerID].exchanges.push( _.extend( card, { storage: [] } ) );
         game.games[game.activeGame].players[playerID].hand.splice(cardID, 1);
       } else {
-        console.log("This card is not an Exchange");
+        console.log('This card is not an Exchange');
       }
     } else {
-      console.log("Card in hand not found");
+      console.log('Card in hand not found');
     }
   },
   characterHasStorage: function(playerID) {
@@ -551,7 +614,7 @@ game.do = {
           exchange.storage.push( game.games[game.activeGame].players[playerID].hand[cardID] );
           game.games[game.activeGame].players[playerID].hand.splice(cardID, 1);
         } else {
-          console.log(game.games[game.activeGame].players[playerID].character[0].name +  " cannot mine for Exchange " + exchangeID);
+          console.log(game.games[game.activeGame].players[playerID].character[0].name +  ' cannot mine for Exchange ' + exchangeID);
         }
       } else {
         var character = game.games[game.activeGame].players[playerID].character[0];
@@ -559,11 +622,11 @@ game.do = {
           character.storage.push( game.games[game.activeGame].players[playerID].hand[cardID] );
           game.games[game.activeGame].players[playerID].hand.splice(cardID, 1);
         } else {
-          console.log(game.games[game.activeGame].players[playerID].character[0].name +  " cannot mine for Character");
+          console.log(game.games[game.activeGame].players[playerID].character[0].name +  ' cannot mine for Character');
         }
       }
     } else {
-      console.log("Card in hand not found");
+      console.log('Card in hand not found');
     }
   },
   resolvePhase: function() {
@@ -586,18 +649,24 @@ game.do = {
   },
   drawChoices: function() {
     var choices = [];
-    choices.push({choice: "Draw from deck", code: "game.do.drawFromDeck(" + game.games[game.activeGame].turn + ")"});
+    choices.push({choice: 'Draw from deck', code: 'game.do.drawFromDeck(' + game.games[game.activeGame].turn + ')'});
     _.each(game.games[game.activeGame].players[game.games[game.activeGame].turn].character[0].storage, function(card, cardID){
-      choices.push({choice: "Draw from Character storage #" + cardID, code: "game.do.drawFromStorage(" + game.games[game.activeGame].turn + ", false, 0, " + cardID + ")" });
+      choices.push({choice: 'Draw from Character storage #' + cardID, code: 'game.do.drawFromStorage(' + game.games[game.activeGame].turn + ', false, 0, ' + cardID + ')' });
     });
     _.each(game.games[game.activeGame].players[game.games[game.activeGame].turn].exchanges, function(exchange, exchangeID){
       _.each(exchange.storage, function(card, cardID){
-        choices.push({choice: "Draw from Exchange #" + exchangeID + " storage #" + cardID, code: "game.do.drawFromStorage(" + game.games[game.activeGame].turn + ", true, " + exchangeID + ", " + cardID + ")" });
+        choices.push({choice: 'Draw from Exchange #' + exchangeID + ' storage #' + cardID, code: 'game.do.drawFromStorage(' + game.games[game.activeGame].turn + ', true, ' + exchangeID + ', ' + cardID + ')' });
       });
     })
     game.games[game.activeGame].players[game.games[game.activeGame].turn].choices = choices;
-    console.log(game.games[game.activeGame].players[game.games[game.activeGame].turn].character[0].name);
-    console.log(game.games[game.activeGame].players[game.games[game.activeGame].turn].choices);
+
+    //if (game.players[game.games[game.activeGame].turn].bot == "Human") {
+      console.log(game.games[game.activeGame].players[game.games[game.activeGame].turn].character[0].name);
+      console.log(game.games[game.activeGame].players[game.games[game.activeGame].turn].choices);
+    //}
+
+    game.do.runRandomBot();
+
   },
   drawChoice: function(choiceNum) {
     if (!_.isEmpty(game.games[game.activeGame].players[game.games[game.activeGame].turn].choices)) {
@@ -611,26 +680,26 @@ game.do = {
         game.do.resolvePhase();
       }
     } else {
-      console.log("No choices available");
+      console.log('No choices available');
     }
   },
   actionChoices: function() {
     var choices = [];
-    choices.push({choice: "Skip"});
+    choices.push({choice: 'Skip'});
     _.each(game.games[game.activeGame].players[game.games[game.activeGame].turn].hand, function(card, cardID){
       // Learn
       if (game.do.isCardSkill(card)) {
-        choices.push({choice: "Learn " + card.type, code: "game.do.learn(" + game.games[game.activeGame].turn + ", " + cardID + ")"});
+        choices.push({choice: 'Learn ' + card.type, code: 'game.do.learn(' + game.games[game.activeGame].turn + ', ' + cardID + ')'});
       }
       // Attack Character
       _.each(game.games[game.activeGame].players, function(player, playerID){
         if (playerID != game.games[game.activeGame].turn) {
           if (game.do.isCardAttack(card)) {
             if (game.do.canAttack(game.games[game.activeGame].turn, playerID, card)) {
-              choices.push({choice: "Attack " + player.character[0].name + " with a " + card.type, code: "game.do.attack(" + game.games[game.activeGame].turn + ", " + cardID + ", " + playerID + ", false, 0)"});
+              choices.push({choice: 'Attack ' + player.character[0].name + ' with a ' + card.type, code: 'game.do.attack(' + game.games[game.activeGame].turn + ', ' + cardID + ', ' + playerID + ', false, 0)'});
               _.each(player.exchanges, function(exchange, exchangeID){
                 if (!game.do.isLocked(exchange)) {
-                  choices.push({choice: "Attack " + player.character[0].name + "'s Exchange #" + exchangeID + " with a " + card.type, code: "game.do.attack(" + game.games[game.activeGame].turn + ", " + cardID + ", " + playerID + ", true, " + exchangeID + ")"});
+                  choices.push({choice: 'Attack ' + player.character[0].name + '\'s Exchange #' + exchangeID + ' with a ' + card.type, code: 'game.do.attack(' + game.games[game.activeGame].turn + ', ' + cardID + ', ' + playerID + ', true, ' + exchangeID + ')'});
                 }
               });
             }
@@ -638,29 +707,35 @@ game.do = {
           // Head Hunt a Skill
           _.each(player.character[0].skills, function(skill, skillID){
             if (game.do.isCardType(card, 'Head Hunter')) {
-              choices.push({choice: "Head Hunt " + player.character[0].name + "'s " + skill.type, code: "game.do.headHunt(" + game.games[game.activeGame].turn + ", " + cardID + ", " + playerID + ", " + skillID + ")"});
+              choices.push({choice: 'Head Hunt ' + player.character[0].name + '\'s ' + skill.type, code: 'game.do.headHunt(' + game.games[game.activeGame].turn + ', ' + cardID + ', ' + playerID + ', ' + skillID + ')'});
             }
           });
         }
       });
       // Build an exchange
       if (game.do.isCardType(card, 'Exchange')) {
-        choices.push({choice: "Build Exchange", code: "game.do.buildExchange(" + game.games[game.activeGame].turn + ", " + cardID + ")"});
+        choices.push({choice: 'Build Exchange', code: 'game.do.buildExchange(' + game.games[game.activeGame].turn + ', ' + cardID + ')'});
       }
       // Character storage
       if (game.do.characterHasStorage(game.games[game.activeGame].turn)) {
-        choices.push({choice: "Put " + card.type + " into Character storage", code: "game.do.store(" + game.games[game.activeGame].turn + ", " + cardID + ", false, 0)"});
+        choices.push({choice: 'Put ' + card.type + ' into Character storage', code: 'game.do.store(' + game.games[game.activeGame].turn + ', ' + cardID + ', false, 0)'});
       }
       // Exchange storage
       _.each(game.games[game.activeGame].players[game.games[game.activeGame].turn].exchanges, function(exchange, exchangeID){
         if (game.do.exchangeHasStorage(game.games[game.activeGame].turn, exchangeID)) {
-          choices.push({choice: "Put " + card.type + " into Exchange #" + exchangeID + " storage", code: "game.do.store(" + game.games[game.activeGame].turn + ", " + cardID + ", true, " + exchangeID + ")"});
+          choices.push({choice: 'Put ' + card.type + ' into Exchange #' + exchangeID + ' storage', code: 'game.do.store(' + game.games[game.activeGame].turn + ', ' + cardID + ', true, ' + exchangeID + ')'});
         }
       });
     });
     game.games[game.activeGame].players[game.games[game.activeGame].turn].choices = choices;
-    console.log(game.games[game.activeGame].players[game.games[game.activeGame].turn].character[0].name);
-    console.log(game.games[game.activeGame].players[game.games[game.activeGame].turn].choices);
+
+    //if (game.players[game.games[game.activeGame].turn].bot == "Human") {
+      console.log(game.games[game.activeGame].players[game.games[game.activeGame].turn].character[0].name);
+      console.log(game.games[game.activeGame].players[game.games[game.activeGame].turn].choices);
+    //}
+
+    game.do.runRandomBot();
+
   },
   actionChoice: function(choiceNum){
     eval(game.games[game.activeGame].players[game.games[game.activeGame].turn].choices[choiceNum].code);
@@ -675,16 +750,22 @@ game.do = {
       if (player.attack[0].cards.length > 0) {
         isAttack = true;
         var choices = [];
-        choices.push({choice: "Skip", code: "game.do.attackSuccess(" + playerID + ")"});
+        choices.push({choice: 'Skip', code: 'game.do.attackSuccess(' + playerID + ')'});
         _.each(game.games[game.activeGame].players[playerID].hand, function(card, cardID){
           if ( game.do.isCardType(card, 'Skullduggery') ) {
-            choices.push({choice: "Skullduggery", code: "game.do.skullduggery(" + playerID + ", " + cardID + ")"});
+            choices.push({choice: 'Skullduggery', code: 'game.do.skullduggery(' + playerID + ', ' + cardID + ')'});
           }
         });
         if (choices.length > 1) {
           game.games[game.activeGame].players[playerID].choices = choices;
-          console.log(game.games[game.activeGame].players[playerID].character[0].name);
-          console.log(game.games[game.activeGame].players[playerID].choices);
+
+          //if (game.players[game.games[game.activeGame].turn].bot == "Human") {
+            console.log(game.games[game.activeGame].players[playerID].character[0].name);
+            console.log(game.games[game.activeGame].players[playerID].choices);
+          //}
+
+          game.do.runRandomBot();
+
         } else {
           eval(choices[0].code);
           game.do.nextTurn();
@@ -708,7 +789,7 @@ game.do = {
   nextTurn: function(){
     game.games[game.activeGame].phase = 0;
     game.games[game.activeGame].turn ++;
-    if (game.games[game.activeGame].turn > 2) {
+    if (game.games[game.activeGame].turn > (game.players.length - 1)) {
       game.games[game.activeGame].turn = 0;
       game.games[game.activeGame].round ++;
     }
@@ -740,7 +821,7 @@ game.do = {
     return ( game.games[game.activeGame].deck.length < 1 );
   },
   endGame: function(){
-    console.log("End of the game");
+    console.log('End of the game');
 
     var playersBitcoins = _.map(game.games[game.activeGame].players, function(player, playerID){
       var bitcoins = player.character[0].storage.length;
@@ -749,10 +830,10 @@ game.do = {
       });
       return {playerID: playerID, bitcoins: bitcoins};
     });
-    playersBitcoins = _.sortBy(playersBitcoins, "bitcoins").reverse();
+    playersBitcoins = _.sortBy(playersBitcoins, 'bitcoins').reverse();
     var winners = _.where(playersBitcoins, {bitcoins: _.first(playersBitcoins).bitcoins});
     if (game.moonTokens < winners.length) {
-      console.log("Rematch to decide a winner");
+      console.log('Rematch to decide a winner');
     }
     _.each(winners, function(winner){
       _.each(game.players, function(player, index){
@@ -768,25 +849,29 @@ game.do = {
       }
     });
 
+    // Play another game
     if (game.moonTokens > 0) {
       game.do.newGame(_.pluck(game.players, 'name'));
       game.do.copyMoonTokens();
       game.do.resolvePhase();
     } else {
-      console.log("End of To The Moon");
+      console.log('End of To The Moon');
     }
   }
 };
 
 // Setup
 game.do.createCards();
-game.do.createRandomCharacters(3);
+game.do.createRandomCharacters(4);
+game.do.setRandomBot(0);
+game.do.setRandomBot(1);
+game.do.setRandomBot(2);
+game.do.setRandomBot(3);
+// game.do.setRandomBot(2);
+// game.do.setHuman(2);
 
-/*
-setInterval(function(){
-  game.do.choose(0);
-}, 20);
-*/
+
+$('#templateTarget').html( _.template( $('#gameTemplate').html() ) );
 
 $('#updateUIButton').click(function(event){
   event.preventDefault();

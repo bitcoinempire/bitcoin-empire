@@ -29,6 +29,66 @@
     
     <div class="container">
 
+      <script type="text/html" id='gameTemplate'>
+        <div class="game">
+          <div class="deck">
+            <% _.each(game.games[game.activeGame].deck, function(deckCard, index){ %>
+              <div class="deckCard" style="margin-left: <%= index %>px;">
+                <img src="images/cards/back-of-card.jpg" class="img-card">
+              </div>
+            <% }); %>
+          </div>
+          <div class="characters">
+            <% _.each(game.games[game.activeGame].players, function(player, index){ %>
+              <div class="character-<%= index %>">
+                <img src="images/cards/<%= player.character[0].imageURL %>" class="img-card">
+              </div>
+            <% }); %>
+          </div>
+          <div class="hands">
+            <% _.each(game.games[game.activeGame].players, function(player, index){ %>
+              <% _.each(player.hand, function(hand, handIndex){ %>
+                <div class="player-<%= index %>-hand" style="margin-left: <%= handIndex * 25 %>px;">
+                  <img src="images/cards/<%= hand.imageURL %>" class="img-card">
+                </div>
+              <% }); %>
+            <% }); %>
+          </div>
+          <div class="skills">
+            <% _.each(game.games[game.activeGame].players, function(player, index){ %>
+              <% _.each(player.character[0].skills, function(skill, skillIndex){ %>
+                <div class="player-<%= index %>-skills" style="margin-left: -<%= skillIndex * 10 %>px;z-index: -<%= skillIndex %>">
+                  <img src="images/cards/<%= skill.imageURL %>" class="img-card">
+                </div>
+              <% }); %>
+            <% }); %>
+          </div>
+          <div class="characterStorage">
+            <% _.each(game.games[game.activeGame].players, function(player, index){ %>
+              <% _.each(player.character[0].storage, function(stored, storedIndex){ %>
+                <div class="player-<%= index %>-stored" style="margin-top: <%= storedIndex * 25 %>px;">
+                  <img src="images/cards/<%= stored.imageURL %>" class="img-card">
+                </div>
+              <% }); %>
+            <% }); %>
+          </div>
+          <div class="exchanges">
+            <% _.each(game.games[game.activeGame].players, function(player, index){ %>
+              <% _.each(player.exchanges, function(exchange, exchangeIndex){ %>
+                <div class="player-<%= index %>-exchange" style="margin-left: <%= exchangeIndex * 60 %>px;">
+                  <img src="images/cards/<%= exchange.imageURL %>" class="img-card">
+                </div>
+              <% }); %>
+            <% }); %>
+          </div>
+        </div>
+      </script>
+
+      <!-- Create your target -->
+      <div id="templateTarget"></div>
+
+      <hr>
+
       <h4>game</h4>
       <p class="wrap">activeGame: <span id="gameActive"></span>, moonTokens: <span id="moonTokens"></span></p>
       <h4>game.games[game.activeGame]</h4>
